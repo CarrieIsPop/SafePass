@@ -1,0 +1,6 @@
+{
+  "name": "SafePass",
+  "description": "Aplicación móvil de seguridad con Machine Learning local para clasificación en tiempo real de robustez de contraseñas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
