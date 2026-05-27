@@ -6,7 +6,7 @@ import './index.css';
 // Register service worker for offline support and install prompts
 if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
+    navigator.serviceWorker.register('./sw.js')
       .then((reg) => {
         console.log('SafePass Service Worker registered successfully:', reg.scope);
       })
@@ -17,7 +17,7 @@ if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
 } else if ('serviceWorker' in navigator) {
   // Register in dev mode too to assist in manual preview PWA checks if needed
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
+    navigator.serviceWorker.register('./sw.js')
       .then((reg) => console.log('SW Registered (Dev Mode):', reg.scope))
       .catch((err) => console.log('SW Registration pending/blocked:', err));
   });

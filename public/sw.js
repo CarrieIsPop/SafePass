@@ -1,9 +1,9 @@
 const CACHE_NAME = 'safepass-cache-v1';
 const ASSETS_TO_CACHE = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  '/icon.svg'
+  './',
+  './index.html',
+  './manifest.json',
+  './icon.svg'
 ];
 
 // Install Event
@@ -64,7 +64,7 @@ self.addEventListener('fetch', (event) => {
       }).catch(() => {
         // If offline and request is document, return root index
         if (event.request.headers.get('accept').includes('text/html')) {
-          return caches.match('/');
+          return caches.match('./') || caches.match('./index.html');
         }
       });
     })
